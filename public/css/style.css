@@ -1,0 +1,50 @@
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+.container {
+    height: 100vh;
+    border: 3px;
+    box-sizing: border-box;
+}
+
+.backGrass {
+    background-color: rgb(128, 231, 175);
+}
+
+#card {
+    border-radius: 2rem;
+    box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.85);
+    -webkit-box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.85);
+    -moz-box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.85);
+}
+
+#colL {
+    background-color: white;
+    border-radius: 2rem 0 0 2rem;
+}
+
+#colR {
+    border-radius: 0 2rem 2rem 0;
+}
+
+
+#card>div {
+    padding: 0;
+    margin: 0;
+    height: 500px;
+}
+
+#imgPoke {
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60%;
+    padding: 10px 0 10px 10px;
+}
+
+.divType>p {
+    color: white;
+}
