@@ -1,50 +1,101 @@
+* {
+    box-sizing: border-box;
+}
 body {
-    margin: 0px;
-    background-color: whitesmoke;
+    background-color: tomato;
+    font-family: 'Manrope', sans-serif;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+h6 {
+    font-weight: 400;
+    color: #4e4e4e;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(226, 226, 226);
+    border-radius: 1rem;
 }
 
 .container {
-    height: 100vh;
-    border: 3px;
-    box-sizing: border-box;
+    width: 1600px;
 }
 
-.backGrass {
-    background-color: rgb(128, 231, 175);
+.capsule {
+    display: inline-block;
+    border-radius: 1rem;
+    width: max-content;
+    padding: 2px 10px;
+    margin: 0 5px 0 0;
 }
 
-#card {
-    border-radius: 2rem;
-    box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.85);
-    -webkit-box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.85);
-    -moz-box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.85);
+.capsule-green {
+    background-color: rgb(166, 223, 128);
+    color: white;
 }
 
-#colL {
+.progress {
+    height: 25px;
+    width: 350px;
+    border-radius: 1rem;
+}
+
+.progressBarMale {
+    background-color: #acd0ff;
+    color: #1a3252;
+}
+
+.progressBarFemale {
+    background-color: rgb(255, 170, 248);
+    color: rgb(65, 21, 61);
+}
+
+.overflow-auto {
+    height: 85px;
+    min-width: 380px;
+    font-size: .9rem;
+}
+
+#divMain{
+    height: 600px;
+    min-width: 1100px;
     background-color: white;
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 8rem;
+    border:5px black solid;
 }
 
-#colR {
-    border-radius: 0 2rem 2rem 0;
-}
-
-
-#card>div {
-    padding: 0;
-    margin: 0;
-    height: 500px;
+#divImg {
+    height: 450px;
+    max-height: 450px;
+    max-width: 450px;
+    border-radius: 6rem;
+    background-image: url(/res/images/ui/pokeBackG.png);
+    background-position: bottom;
+    background-size: contain;
 }
 
 #imgPoke {
+    max-width: 300px;
+    max-height: 300px;
     object-fit: contain;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 60%;
-    padding: 10px 0 10px 10px;
 }
 
-.divType>p {
-    color: white;
+#colAbout {
+    margin-top: 4rem;
+}
+
+#boxDesc {
+    height: 90px;
+    width: 400px;
+    background-color: whitesmoke;
+    padding: 10px 20px 10px 20px;
+    border-radius: 1rem;
+
 }
