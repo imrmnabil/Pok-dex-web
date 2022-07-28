@@ -1,0 +1,89 @@
+.capsule-grass {
+    background-color: rgb(174, 199, 82);
+    color: white;
+}
+
+.capsule-poison {
+    background-color: rgb(168, 81, 202);
+    color: white;
+}
+
+.capsule-fire {
+    background-color: rgb(255, 164, 45);
+    color: rgb(0, 0, 0);
+}
+
+.capsule-normal {
+    background-color: rgb(148, 142, 115);
+    color: white;
+}
+
+.capsule-fighting {
+    background-color: firebrick;
+    color: white;
+}
+
+.capsule-flying {
+    background-color: #cb90fc;
+    color: black;
+}
+
+.capsule-ground {
+    background-color: rgb(201, 187, 124);
+    color: black;
+}
+
+.capsule-bug {
+    background-color: rgb(225, 253, 62);
+    color: rgb(0, 0, 0);
+}
+
+.capsule-ghost {
+    background-color: #392446;
+    color: white;
+}
+
+.capsule-steel {
+    background-color: #d2d5ff;
+    color: rgb(0, 0, 0);
+}
+
+.capsule-water {
+    background-color: #57b3ff;
+    color: rgb(255, 255, 255);
+}
+
+.capsule-electric {
+    background-color: #ffde00;
+    color: black;
+}
+
+.capsule-psychic {
+    background-color: #fa89d8;
+    color: black;
+}
+
+.capsule-ice {
+    background-color: #a9e7ff;
+    color: black;
+}
+
+.capsule-dragon {
+    background-color: #5c33f3;
+    color: rgb(255, 255, 255);
+}
+
+.capsule-dark {
+    background-color: #292929;
+    color: rgb(255, 255, 255);
+}
+
+.capsule-fairy {
+    background-color: #ff9ef2;
+    color: black;
+}
+
+.capsule-rock {
+    background-color: #867547;
+    color: rgb(255, 255, 255);
+}

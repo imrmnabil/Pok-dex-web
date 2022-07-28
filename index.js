@@ -12,8 +12,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/pokemon/:iD', (req, res) => {
     const Index = parseInt(req.params.iD) - 1;
-    const pokeInfo = pokeData[Index]
-    res.render('dex',{...pokeInfo})
+    if (Index >= 0 && Index < 809) {
+        const pokeInfo = pokeData[Index]
+        res.render('dex', { ...pokeInfo })
+    }
+    else {
+        res.render('notfound')
+    }
+});
+
+app.get('/', (req, res) => {
+    res.render('notfound')
 });
 
 app.listen(port, () => {
