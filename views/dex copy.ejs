@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Pokedex</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row vh-100 d-flex justify-content-center align-items-center">
+            <div class="col" id="divMain">
+                <div class="h-100 row d-flex justify-content-center ">
+                    <div class="col align-self-center">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <div class="col d-flex align-items-center justify-content-center" id="divImg">
+                                <img src="/res/images/hires/001.png" alt="" id="imgPoke">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col px-0" id="colAbout">
+                        <div class="d-flex justify-content-start">
+                            <h1 id="hMain" class="col-6 p-0">Bulbasaur</h1>
+                            <h2 id="hID" class="col-6 align-self-center">#001</h2>
+                        </div>
+
+                        <div>
+                            <p class="capsule capsule-grass">Grass</p>
+                            <p class="capsule capsule-poison">Poison</p>
+                        </div>
+
+                        <div class="d-flex mt-4 justify-content-start">
+                            <div class="col-6 px-0">
+                                <h5>Height</h5>
+                                <h6>0.7 m</h6>
+                            </div>
+                            <div class="col-6 px-0">
+                                <h5>Weight</h5>
+                                <h6>6.9 kg</h6>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-start">
+                            <div class="col px-0">
+                                <h5>Gender ratio</h5>
+                                <div class="d-flex">
+                                    <div>
+                                        <span class="material-symbols-outlined">male</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progressBarMale" role="progressbar"
+                                            style="width: 87.5%" aria-valuenow="87.5" aria-valuemin="0"
+                                            aria-valuemax="100">87.5%</div>
+                                        <div class="progress-bar progressBarFemale" role="progressbar"
+                                            style="width: 12.5%" aria-valuenow="12.5" aria-valuemin="0"
+                                            aria-valuemax="100">12.5%</div>
+                                    </div>
+                                    <div>
+                                        <span class="material-symbols-outlined">female</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-4 justify-content-start">
+                            <div class="col px-0">
+                                <h5>Species</h5>
+                                <h6>Seed Pokemon</h6>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-2 justify-content-start">
+                            <div class="col px-0">
+                                <h5>Description</h5>
+                                <div class="d-flex justify-content-center align-items-center" id="boxDesc">
+                                    <div class="overflow-auto">
+                                        <p class="mx-1 mt-1">
+                                            Bulbasaur can be seen napping in bright sunlight. There is a seed on its
+                                            back. By soaking up the sun’s rays, the seed grows progressively larger.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

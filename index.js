@@ -10,8 +10,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.render('dex')
+app.get('/pokemon/:iD', (req, res) => {
+    const Index = parseInt(req.params.iD) - 1;
+    const pokeInfo = pokeData[Index]
+    res.render('dex',{...pokeInfo})
 });
 
 app.listen(port, () => {
