@@ -4,6 +4,7 @@
 
 body {
     background-image: url(/res/images/ui/Cover.png);
+    background-attachment: fixed;
     background-color: #ff5f5f;
     background-size: cover;
     background-position:center;
@@ -156,3 +157,7 @@ h6 {
     background-color: white;
     border-radius: 1rem;
 }
+
+/* #bgList {
+    background-image: none;
+} */

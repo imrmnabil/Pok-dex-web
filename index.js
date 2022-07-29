@@ -22,7 +22,7 @@ app.get('/pokemon/:iD', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.render('notfound')
+    res.render('home',{pokeData})
 });
 
 app.listen(port, () => {

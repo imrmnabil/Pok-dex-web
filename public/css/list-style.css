@@ -1,0 +1,41 @@
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.divCard {
+    margin: 15px;
+    padding: 0px;
+    height: 250px;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 2rem;
+
+    box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
+    -webkit-box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
+    -moz-box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
+
+    transition: background-color 0.2s;
+}
+
+.divCard:hover {
+    background-color: rgb(233, 233, 233);
+    
+}
+
+.imgDiv {
+    height: 150px;
+    width: 150px;
+    border-radius: 5rem;
+    background-color: rgb(233, 233, 233);
+    background-image: url(/res/images/ui/pokeBackG.png);
+    background-size: contain;
+    background-position: bottom;
+}
