@@ -22,12 +22,15 @@ a:hover {
     -webkit-box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
     -moz-box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
 
-    transition: background-color 0.2s;
+    transition: box-shadow 0.2s;
+    transition: -webkit-box-shadow 0.2s;
+    transition: -moz-box-shadow 0.2s;
 }
 
 .divCard:hover {
-    background-color: rgb(233, 233, 233);
-    
+    box-shadow: 0px 1px 20px 1px rgba(100, 100, 100, 0.62);
+    -webkit-box-shadow: 0px 1px 20px 1px rgba(100, 100, 100, 0.62);
+    -moz-box-shadow: 0px 1px 20px 1px rgba(100, 100, 100, 0.62);
 }
 
 .imgDiv {
@@ -39,3 +42,28 @@ a:hover {
     background-size: contain;
     background-position: bottom;
 }
+
+
+.listBtn {
+    margin: 15px;
+    padding: 0px;
+    height: 80px;
+    min-width: 150px;
+    background-color: white;
+    border-radius: 2rem;
+
+    box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
+    -webkit-box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
+    -moz-box-shadow: 0px 1px 10px 1px rgba(100, 100, 100, 0.62);
+
+    transition: background-color 0.2s;
+}
+
+.listBtn:hover {
+    background-color: rgba(255, 255, 255, 0.795);
+}
+
+a>span,div>span{
+    font-size: 24px;
+}
+

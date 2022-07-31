@@ -22,7 +22,24 @@ app.get('/pokemon/:iD', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.render('home',{pokeData})
+    let pageNo = 1;
+    res.render('home',{pokeData,pageNo});
+
+});
+
+app.get('/page/:pg', (req, res) => {
+    let pageNo = 1;
+    try {
+        if(req.params.pg){
+            pageNo = parseInt(req.params.pg);
+        }
+        res.render('home',{pokeData,pageNo});
+
+    }
+    catch(e){
+        console.log(e);
+        res.render('home',{pokeData,pageNo});
+    }
 });
 
 app.listen(port, () => {
