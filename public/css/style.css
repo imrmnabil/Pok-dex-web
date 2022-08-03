@@ -4,9 +4,10 @@
 
 body {
     background-image: url(/res/images/ui/Cover.png);
-    background-attachment: fixed;
+    background-attachment:fixed;
     background-color: #ff5f5f;
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-position:center;
     font-family: 'Manrope', sans-serif;
 }

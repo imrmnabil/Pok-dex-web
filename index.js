@@ -3,7 +3,7 @@ const path = require('path');
 const pokeData = require('./data/pokedex.json');
 const typeData = require('./data/types.json');
 const app = express();
-const port = process.env.PORT ||5000;
+const port = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -22,25 +22,40 @@ app.get('/pokemon/:iD', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    let pageNo = 1;
-    res.render('home',{pokeData,pageNo});
+  
+        let pageNo = 1;
+        res.render('home', { pokeData, pageNo });
+        console.log(req.query);
 
 });
+
+app.get('/notready', (req,res)=> {
+    res.render('notyet');
+})
 
 app.get('/page/:pg', (req, res) => {
     let pageNo = 1;
     try {
-        if(req.params.pg){
+        if (req.params.pg) {
             pageNo = parseInt(req.params.pg);
         }
-        res.render('home',{pokeData,pageNo});
+        res.render('home', { pokeData, pageNo });
 
     }
-    catch(e){
+    catch (e) {
         console.log(e);
-        res.render('home',{pokeData,pageNo});
+        res.render('home', { pokeData, pageNo });
     }
 });
+
+app.get('/data/pokedexJSON', (req,res) => {
+    try {
+        res.json(pokeData);
+    }
+    catch(e) {
+        console.log('Sending data failed!');
+    }
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
