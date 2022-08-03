@@ -10,29 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/list-style.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <% if(pageNo === 1) {%>
-    <title>Pokedex</title>
-    <% } else { %> 
-        <title>Pokedex | Page <%= pageNo %> </title>
-        <% } %> 
+    <% if(pageNo===1) {%>
+        <title>Pokedex</title>
+        <% } else { %>
+            <title>Pokedex | Page <%= pageNo %>
+            </title>
+            <% } %>
 </head>
 
 <body id="bgList">
-    <nav class="navbar navbar-expand-lg" id="mainNav" style="position:relative;">
+    <nav class="navbar navbar-expand-lg d-flex align-items-start" id="mainNav" style="position:relative;">
         <span class="navbar-brand" href="">PokéDex</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse d-flex justify-content-between align-items-start" id="navbarNav"
+            style="margin-top: 20px;">
+            <ul class="navbar-nav col-6">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
@@ -46,6 +48,14 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
+            <form class="col-3">
+                <input class="form-control mr-sm-2 mr-5" style="width: fit-content; border-radius: 2rem;" type="search"
+                    placeholder="Search" aria-label="Search" id="searchBar">
+                    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                    <div id="searchResult">
+                    </div>
+            </form>
+
         </div>
     </nav>
 
@@ -54,9 +64,12 @@
         <div class="d-flex row justify-content-around">
             <% for(let i=(pageNo - 1) *20 ; i < 809 && i < pageNo*20; i++) {%>
                 <% let id3d=pokeData[i].id.toLocaleString('en-US',{minimumIntegerDigits:3, useGrouping:false}) %>
-                    <a class="divCard d-flex flex-column justify-content-center align-items-center" href="/pokemon/<%= id3d %>">
-                        <div class="align-self-end pr-3" style="color: rgb(151, 151, 151);">#<%= id3d %></div>
-                        <div class="imgDiv d-flex justify-content-center align-items-center"><img src="/res/images/thumbnails/<%= id3d %>.png" alt="" id="imgList"></div>
+                    <a class="divCard d-flex flex-column justify-content-center align-items-center"
+                        href="/pokemon/<%= id3d %>">
+                        <div class="align-self-end pr-3" style="color: rgb(151, 151, 151);">#<%= id3d %>
+                        </div>
+                        <div class="imgDiv d-flex justify-content-center align-items-center"><img
+                                src="/res/images/thumbnails/<%= id3d %>.png" alt="" id="imgList"></div>
                         <div class="d-flex flex-column align-items-center">
                             <h4 id="hList" class="pt-1">
                                 <%= pokeData[i].name.english %>
@@ -67,19 +80,28 @@
         </div>
         <div>
             <div class="row justify-content-center">
-                <%if(pageNo !== 1){%>
-                        <a style="text-decoration:none;" href="/page/<%= pageNo - 1 %> " class="listBtn d-flex align-items-center justify-content-center">
-                           <span class="material-symbols-outlined"> arrow_back </span><span class="ml-1"> PREV</span>
-                        </a> 
-                <% }%> 
-                <%if(pageNo !== 41){%>
-                        <a style="text-decoration:none;" href="/page/<%= pageNo + 1 %>" class="listBtn  d-flex align-items-center justify-content-center">
-                            <span class="mr-1">NEXT </span><span class="material-symbols-outlined"> arrow_forward </span>
-                         </a> 
-                    <% } %> 
+                <%if(pageNo !==1){%>
+                    <a style="text-decoration:none;" href="/page/<%= pageNo - 1 %> "
+                        class="listBtn d-flex align-items-center justify-content-center">
+                        <span class="material-symbols-outlined"> arrow_back </span><span class="ml-1"> PREV</span>
+                    </a>
+                    <% }%>
+                        <%if(pageNo !==41){%>
+                            <a style="text-decoration:none;" href="/page/<%= pageNo + 1 %>"
+                                class="listBtn  d-flex align-items-center justify-content-center">
+                                <span class="mr-1">NEXT </span><span class="material-symbols-outlined"> arrow_forward
+                                </span>
+                            </a>
+                            <% } %>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    $('#searchBar').addEventListener('change', ()=> {
+        console.log('changed!');
+    })
+</script>
 
 </html>
