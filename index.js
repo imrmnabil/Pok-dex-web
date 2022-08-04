@@ -22,14 +22,12 @@ app.get('/pokemon/:iD', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  
-        let pageNo = 1;
-        res.render('home', { pokeData, pageNo });
-        console.log(req.query);
 
+    let pageNo = 1;
+    res.render('home', { pokeData, pageNo });
 });
 
-app.get('/notready', (req,res)=> {
+app.get('/notready', (req, res) => {
     res.render('notyet');
 })
 
@@ -48,12 +46,34 @@ app.get('/page/:pg', (req, res) => {
     }
 });
 
-app.get('/data/pokedexJSON', (req,res) => {
+app.get('/search/', (req, res) => {
     try {
-        res.json(pokeData);
+        const searchString = req.query.q;
+        const searchResultObj = [];
+        let maxItem = 3;
+        let itemCount = 0;
+
+        if (searchString === '') {
+            res.json(searchResultObj);
+        }
+
+        else {
+            for (let i = 0; i < 809; i++) {
+                if ((pokeData[i].name.english.toLowerCase().search(searchString.toLowerCase()) !== -1)) {
+                    const thumbLink = '/res/images/sprites/' + pokeData[i].id.toLocaleString('en-US', { minimumIntegerDigits: 3, useGrouping: false }) + '.png';
+                    const pokeName = pokeData[i].name.english;
+                    const pokeLink = `/pokemon/` + pokeData[i].id;
+                    searchResultObj[itemCount] = { thumbLink, pokeName, pokeLink }
+                    itemCount++;
+                }
+                if (itemCount === maxItem) { break; }
+            }
+            res.json(searchResultObj);
+        }
     }
-    catch(e) {
-        console.log('Sending data failed!');
+    catch(e)
+    {
+        console.log('Invalid regular expression: "backslash"');
     }
 })
 
